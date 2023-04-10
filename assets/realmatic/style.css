@@ -1,0 +1,159 @@
+@charset "UTF-8";
+
+body {
+  font-family: 'Josefin Sans', serif, 'KaiTi', '楷体', STKaiti, '华文楷体', serif;
+  font-size: 16px;
+  text-color: #3a373e;
+}
+
+.navbar {
+  border-bottom: 1px solid #DDDDDD;
+}
+
+.brand {
+  font-family: 'Ubuntu Condensed', sans-serif;
+  font-size: 30px;
+  color: #1D003D;
+}
+
+.brand-c {
+  font-family: 'Ma Shan Zheng', cursive;
+  font-size: 32px;
+  color: #1D003D;
+}
+
+#navbarMain {
+    padding-top: 0rem;
+  //padding-bottom: 0rem;
+}
+
+#navbarMain .navbar-toggler {
+  background-color: #d65E4b;
+}
+
+#navbarMain .navbar-nav .nav-item .nav-link {
+  font-family: 'Josefin Sans', serif, 'KaiTi', '楷体', STKaiti, '华文楷体', serif;
+  font-weight: bold;
+  font-size: 16px;
+  color: #54474D;
+}
+
+#navbarMmain .navbar-nav .nav-item .nav-link:hover {
+  font-weight: bold;
+  font-size: 16px;
+  color: #D65E4B;
+}
+
+a {
+  color: #1D003D;
+}
+
+a:hover {
+  color: #1D003D;
+}
+
+.text-primary {
+  color: #1D003D !important;
+}
+
+.btn-primary{
+  background: #1D003D;
+}
+
+/* dropdown menu */
+.dropdown .dropdown-item {
+  font: normal 14px Roboto;
+}
+
+.dropdown:hover>.dropdown-menu {
+  display: block;
+}
+
+.dropdown>.dropdown-toggle:active {
+  /*Without this, clicking will make it sticky*/
+    pointer-events: none;
+}
+/* end of dropdown menu */
+
+/* image hover */
+#publication img {
+  opacity: 1.0;
+}
+
+#publication img:hover {
+  opacity: .75;
+}
+
+/* svg map */
+#buildings a:hover { 
+  filter: brightness(85%); 
+}
+
+.map-popover {
+  --bs-popover-max-width: 200px;
+  --bs-popover-bg: #94cdd3;
+  --bs-popover-header-bg: #2e6679;
+  --bs-popover-header-color: #FFFFFF;
+  --bs-popover-body-padding-x: .5rem;
+  --bs-popover-body-padding-y: .5rem;
+}
+
+#buildings .cls-1 { fill: #b05a2b; }
+#buildings .cls-2 { fill: #713a1c; }
+#buildings .cls-3 { fill: #eeece7; }
+#buildings .cls-4 { fill: #53101b; }
+#buildings .cls-5 { fill: #6f6e6b; }
+#buildings .cls-6 { fill: #f9e2cf; }
+#buildings .cls-7 { fill: #cf2844; }
+#buildings .cls-8 { fill: #8f1c2f; }
+#buildings .cls-9 { fill: #ccab9a; }
+#buildings .cls-10 { fill: #f07b3b; }
+#buildings .cls-11 { fill: #aeada9; }
+
+/* svg map effect end */
+
+/* index articles */
+#articles .card a:link { text-decoration: none; }
+#articles .card a:visited { text-decoration: none; }
+#articles .card a:hover { text-decoration: none; }
+#articles .card a:active { text-decoration: none; }
+/* index articles end */
+
+/* timeline */
+.timeline {
+  border-left: 1px solid hsl(0, 0%, 90%);
+  position: relative;
+  list-style: none;
+}
+
+.timeline .timeline-item {
+  position: relative;
+}
+
+.timeline .timeline-item:after {
+  position: absolute;
+  display: block;
+  top: 0;
+}
+
+.timeline .timeline-item:after {
+  background-color: #FFFFFF;
+  border: solid 1px #AAAAAA;
+  left: -41px;
+  border-radius: 50%;
+  height: 17px;
+  width: 17px;
+  content: "";
+}
+/* timeline end */
+
+/* scrollspy sidebar */
+.scrollspy-sidebar a.nav-link{ 
+  color: #3a373e;
+}
+
+.scrollspy-sidebar a.nav-link.active{ 
+  font-weight: bold !important;
+}
+/* scrollspy sidebar end */
+
