@@ -1,5 +1,32 @@
+// render directory 
+var xmlhttp = new XMLHttpRequest();
+xmlhttp.onreadystatechange = function() {
+if (this.readyState == 4 && this.status == 200) {
+    var jObj = JSON.parse(this.responseText);
+    //console.log("Json parsed data is: " + JSON.stringify(jObj));
+    let text = "<div class='row'><h3 class='my-4'>DIRECTORY</h3>"
+    for (let x in jObj) {
+      text += "<h4 class='my-3'>" + jObj[x].CATOGERY + "</h4>";
+      s = jObj[x].SITES
+      for (let y in s) {
+        text += "<div class='col-sm-3'>"
+        text += "<p>" + s[y].NAME + "<br>" + s[y].STREET+ "<br>" + s[y].CITY + "<br>"
+        if ( s[y].WEBSITE != '' ) {
+            text += "<a href='" + s[y].WEBSITE + "'>Link to Website</a>"
+        }
+        text += "</div>"
+      }
+    }
+    text += "</div>"
+    document.getElementById("dirContainer").innerHTML = text;
+  }
+};
+xmlhttp.open("GET", "/assets/michelle/sfcmap.json", true);
+xmlhttp.send();
+
+// render map
 xhr = new XMLHttpRequest();
-xhr.open("GET","/assets/michelle/media/sfcmap.svg",false);
+xhr.open("GET","/assets/michelle/media/sfcmap.min.svg",false);
 // Following line is just to be on the safe side;
 // not needed if your server delivers SVG with correct MIME type
 xhr.overrideMimeType("image/svg+xml");
