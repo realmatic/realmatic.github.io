@@ -26,7 +26,7 @@ xmlhttp.send();
 
 // render map
 xhr = new XMLHttpRequest();
-xhr.open("GET","/assets/michelle/sfcmap.svg",false);
+xhr.open("GET","/assets/michelle/sfcmap.min.svg",false);
 // Following line is just to be on the safe side;
 // not needed if your server delivers SVG with correct MIME type
 xhr.overrideMimeType("image/svg+xml");
@@ -41,32 +41,32 @@ const outlineList = document.querySelectorAll('g[id$="Outline"]');
 for (const i of outlineList.values()) { i.style='display:none'; }
 
 var sites= { 
-  '_41Ross': ['' ,'caption']
-, 'Betty_Ong_Recreation_Center': ['', 'caption'] //Ann?
-, 'Cameron_House': ['', 'caption']
-, 'CCDC': ['', 'caption']
-, 'CCSF': ['#f7b95e', 'caption']
-, 'Chinese_Culture_Center': ['' , 'caption']//cultural? //
-, 'Chinese_for_Affirmative_Action': ['#f7b95e', 'caption']
-, 'Chinese_Hospital': ['#94cdd3', 'caption']
-, 'Chinese_Historical_Society_of_America': ['' , 'caption']
-, 'Chinese_Newcomer_s_Service_Center': ['' , 'caption']
-, 'Chinese_Progressive_Association': ['', 'caption']
-, 'Gum_Moon_Residence_Hall': ['', 'caption']
-, 'Gordon_J_Lau_Elementary_School': ['' , 'caption']//
-, 'I-Hotel': ['#f07b3b', 'caption']
-, 'Kubla_Khan_Nightclub': ['#cf2844', 'caption']
-, 'Mei_Lun_Yuen': ['#f07b3b', 'caption']
-, 'North_Ping_Yuen': ['', 'caption']
-, 'Ping_Yuen': ['#f07b3b', 'caption']
-, 'Portsmouth_Square': ['##95d1a3' , 'caption']//
-, 'Self-Help_for_the_Elderly_-_Geen_Mun_Senior_Center': ['', 'caption'] // Senior Center
-, 'Spofford_Alley': ['#f07b3b', 'caption']
-, 'St_Mary_s_Square': ['' , 'caption']
-, 'West_Ping_Yuen': ['' , 'caption']
-, 'Willie_Wong_Playground': ['#95d1a3', 'caption']
-, 'Woh_Hei_Yuen': ['#95d1a3', 'caption']
-, 'YMCA_Chinatown': ['', 'caption']
+  '_41Ross': ['','a collaborative art space founded by CCDC and the Chinese Culture Center']
+, 'Betty_Ann_Ong_Recreation_Center': ['','a state-of-the-art recreational facility']
+, 'Cameron_House': ['','building strength and resilience through family-centered programs']
+, 'Chinatown_Community_Development_Center': ['','strengthening community and enhancing quality of life in Chinatown']
+, 'Chinese_for_Affirmative_Action': ['#f7b95e','a community based civil rights organization']
+, 'Chinese_Hospital': ['#94cdd3','a full-service hospital providing compassionate, patient-centered healthcare']
+, 'Chinese_Culture_Center': ['','a cultural anchor committed to racial equality through education and contemporary art']
+, 'Chinese_Historical_Society_of_America': ['','collecting, preserving, and illuminating the history of Chinese in America']
+, 'Chinese_Newcomers_Service_Center': ['','a multilingual agency providing transitional guidance and empowering immigrants']
+, 'Chinese_Progressive_Association': ['','promoting collective power to demand better living and working conditions for all']
+, 'City_College_of_SF_-_Chinatown': ['#f7b95e','empowering students with life skills, social knowledge, and self-confidence']
+, 'Gordon_J_Lau_Elementary_School': ['','established in 1885 as the "Chinese Primary School," continues to provide education for local residents']
+, 'Gum_Moon_Residence_Hall': ['#f07b3b','providing sanctuary for women and children in geographic and social transition']
+, 'International_Hotel': ['#f07b3b','historical site of landmark affordable housing advocacy in Chinatown']
+, 'Kubla_Khan_Nightclub': ['#cf2844','once a lively cabaret nightclub in the 1940s, now a fine arts shop']
+, 'Mei_Lun_Yuen': ['#f07b3b','a 185-unit complex constructed under the HUD 236 Program']
+, 'North_Ping_Yuen': ['','1961 annex to Ping Yuen, adding 185 additional units']
+, 'Ping_Yuen': ['#f07b3b','landmark housing project, providing 234-units to low-income families']
+, 'Portsmouth_Square': ['','Popular open space public park, dating back to Spanish California']
+, 'Self-Help_for_the_Elderly_-_Geen_Mun': ['','providing support to seniors in order to promote independence, dignity, and self-worth']
+, 'Spofford_Alley': ['#f07b3b','historic alley of Chinatown, one of the many involved in the Alleyways Program']
+, 'St_Mary_s_Square': ['','a rooftop green space located on top of a multi-level garage']
+, 'West_Ping_Yuen': ['','an addition to Central Ping Yuen completed in 1956']
+, 'Willie_Wong_Playground': ['#95d1a3','an urban park featuring playgrounds, athletic courts, and a gym']
+, 'Woh_Hei_Yuen_Park': ['#95d1a3','a small urban park with a robust recreation center offering a wide range of programs']
+, 'YMCA_Chinatown': ['','founded in 1911, serving the community as a recreation center and social site']
 }
 
 $.each(sites,
