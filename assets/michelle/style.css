@@ -15,15 +15,8 @@
   .navbar {
  //   flex-direction: column;
     padding-top: .5em;
-    padding-bottom: 1.5em;
+    padding-bottom: 0em;
   }
-}
-
-.brand {
-  font-family: 'Crimson Pro', serif; 
-  font-size: 36px;
-  color: #343a40;
-  text-transform: capitalize; 
 }
 
 .bg-light {
