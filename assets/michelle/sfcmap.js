@@ -84,7 +84,7 @@ function( key, vals) {
     $("#"+key+"_Site").parent().css('cursor','default')
   }
 
-  new bootstrap.Popover($("#"+key+"_Site").parent(), { trigger:'hover', placement:'top', title : $("#"+key+"_Site").attr('data-name').replace(' Site', ''), content: vals[1], container: 'body', customClass:'hbg'+key })
+  new bootstrap.Popover($("#"+key+"_Site").parent(), { trigger:'hover', placement:'top', title : $("#"+key+"_Site").attr('data-name').replace(' Site', ''), html:true, content: '<i>'+ vals[1] +'</i>', container: 'body', customClass:'hbg'+key })
 });
 
 var beforePan
