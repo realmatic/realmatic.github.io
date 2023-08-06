@@ -1,0 +1,81 @@
+
+
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" /><meta http-equiv="x-ua-compatible" content="ie=edge" /><title>睿脉 realmatic</title><link rel="apple-touch-icon" sizes="180x180" href="https://realmatic.com/assets/realmatic/favicon/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="https://realmatic.com/assets/realmatic/favicon/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="https://realmatic.com/assets/realmatic/favicon/favicon-16x16.png"><link rel="manifest" href="https://realmatic.com/assets/realmatic/favicon/site.webmanifest"><link rel="mask-icon" href="https://realmatic.com/assets/realmatic/favicon/safari-pinned-tab.svg" color="#5bbad5"><meta name="msapplication-TileColor" content="#da532c"><meta name="theme-color" content="#ffffff"><link href="https://fonts.googleapis.com/css2?family=Long+Cang&family=Ma+Shan+Zheng&family=Josefin+Sans&family=Ubuntu+Condensed&display=swap" rel="stylesheet"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" /><link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous"><script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script><script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script><!--- script src="https://cdn.jsdelivr.net/npm/d3@7"></script><script src="https://cdn.jsdelivr.net/npm/@observablehq/plot@0.6"></script ---><link rel="stylesheet" href="https://unpkg.com/photoswipe@5.3.8/dist/photoswipe.css"/><link rel="stylesheet" href="https://unpkg.com/photoswipe-dynamic-caption-plugin/photoswipe-dynamic-caption-plugin.css"><script type='module'>
+import PhotoSwipeLightbox from 'https://unpkg.com/photoswipe/dist/photoswipe-lightbox.esm.js';
+import PhotoSwipeDynamicCaption from 'https://unpkg.com/photoswipe-dynamic-caption-plugin';
+
+const smallScreenPadding = {
+  top: 0, bottom: 0, left: 0, right: 0
+};
+const largeScreenPadding = {
+  top: 30, bottom: 30, left: 0, right: 0
+};
+const lightbox = new PhotoSwipeLightbox({
+  gallerySelector: '#gallery',
+  childSelector: '.pswp-gallery__item',
+  
+        // optionaly adjust viewport
+  paddingFn: (viewportSize) => {
+  return viewportSize.x < 700 ? smallScreenPadding : largeScreenPadding
+  },
+  pswpModule: () => import('https://unpkg.com/photoswipe')
+});
+
+const captionPlugin = new PhotoSwipeDynamicCaption(lightbox, {
+  mobileLayoutBreakpoint: 700,
+  type: 'auto',
+  mobileCaptionOverlapRatio: 1
+});
+lightbox.init();
+</script></head><body><div class="container my-5"><!-- Gallery --><div class="row pswp-gallery" id="gallery"><div class="col-lg-4 col-md-12 mb-4 mb-lg-0"><div class="pswp-gallery__item"><a  href="https://cdn.photoswipe.com/photoswipe-demo-images/photos/3/img-2500.jpg"
+      data-pswp-width="2500"
+      data-pswp-height="1666"
+      target="_blank"
+    ><img
+      src="https://cdn.photoswipe.com/photoswipe-demo-images/photos/3/img-200.jpg"
+      class="w-100 rounded mb-4"
+      alt="Boat on Calm Water"
+    /></a><div class="pswp-caption-content"><b>Lorem ipsum dolor (1933)</b><br>Color photograph<br>12 x 10</div></div><div class="pswp-gallery__item"><a  href="https://cdn.photoswipe.com/photoswipe-demo-images/photos/2/img-2500.jpg"
+      data-pswp-width="1669"
+      data-pswp-height="2500"
+      target="_blank"
+    ><img
+      src="https://cdn.photoswipe.com/photoswipe-demo-images/photos/2/img-400.jpg"
+      class="w-100 rounded mb-4"
+      alt="Wintry Mountain Landscape"
+    /></a><div class="pswp-caption-content"><b>Lorem ipsum dolor (1933)</b><br>Color photograph<br>12 x 10</div></div></div><div class="col-lg-4 mb-4 mb-lg-0"><div class="pswp-gallery__item"><a  href="https://cdn.photoswipe.com/photoswipe-demo-images/photos/1/img-2500.jpg"
+      data-pswp-width="1667"
+      data-pswp-height="2500"
+      target="_blank"
+    ><img
+      src="https://cdn.photoswipe.com/photoswipe-demo-images/photos/1/img-2500.jpg"
+      class="w-100 rounded mb-4"
+      alt="Mountains in the Clouds"
+    /></a><div class="pswp-caption-content"><b>Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. (2008)</b><br>quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem, ut libero venenatis faucibus.
+    </div></div><div class="pswp-gallery__item"><a href="https://mdbcdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(73).webp"
+      data-pswp-width="708"
+      data-pswp-height="472"
+      target="_blank"
+    ><img
+      src="https://mdbcdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(73).webp"
+      class="w-100 rounded mb-4"
+      alt="Boat on Calm Water"
+    /></a><div class="pswp-caption-content">
+          Short caption with <a href="https://example.com" target="_blank">the link</a>.
+    </div></div></div><div class="col-lg-4 mb-4 mb-lg-0"><div class="pswp-gallery__item"><a  href="https://mdbcdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(18).webp"
+      data-pswp-width="708"
+      data-pswp-height="472"
+      target="_blank"
+    ><img
+      src="https://mdbcdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(18).webp"
+      class="w-100 rounded mb-4"
+      alt="Waves at Sea"
+    /></a></div><div class="pswp-gallery__item"><a  href="https://mdbcdn.b-cdn.net/img/Photos/Vertical/mountain3.webp"
+      data-pswp-width="471"
+      data-pswp-height="707"
+      target="_blank"
+    ><img
+      src="https://mdbcdn.b-cdn.net/img/Photos/Vertical/mountain3.webp"
+      class="w-100 rounded mb-4"
+      alt="Yosemite National Park"
+    /></a></div></div></div><!-- Gallery --></div></body></html>

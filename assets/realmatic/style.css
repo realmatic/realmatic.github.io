@@ -39,7 +39,7 @@ body {
 }
 
 #navbarMmain .navbar-nav .nav-item .nav-link:hover {
-  font-weight: bold;
+//  font-weight: bold;
   font-size: 16px;
   color: #D65E4B;
 }
