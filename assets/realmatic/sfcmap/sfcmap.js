@@ -1,6 +1,6 @@
 // render map
 xhr = new XMLHttpRequest();
-xhr.open("GET","/assets/realmatic/sfcmap/sfcmap.min.svg",false);
+xhr.open("GET","/assets/realmatic/sfcmap/sfcmap.svg",false);
 // Following line is just to be on the safe side;
 // not needed if your server delivers SVG with correct MIME type
 xhr.overrideMimeType("image/svg+xml");
@@ -58,7 +58,10 @@ function( key, vals) {
     $("#"+key+"_Site").parent().css('cursor','default')
   }
 
+  new bootstrap.Popover($("#"+key+"_Site").parent(), { trigger:'hover', placement:'top', title : $("#"+key+"_Site").attr('data-name').replace(' Site', ''), html:true, content: '<i>'+ vals[1] +'</i><img src="/assets/realmatic/sfcmap/placeholder-chinese-dragon.png" class="img-fluid">', container: 'body', customClass:'hbg'+key })
+/*
   new bootstrap.Popover($("#"+key+"_Site").parent(), { trigger:'hover', placement:'top', title : $("#"+key+"_Site").attr('data-name').replace(' Site', ''), html:true, content: '<i>'+ vals[1] +'</i>', container: 'body', customClass:'hbg'+key })
+*/
 });
 
 var beforePan
