@@ -58,7 +58,7 @@ function( key, vals) {
     $("#"+key+"_Site").parent().css('cursor','default')
   }
 
-  new bootstrap.Popover($("#"+key+"_Site").parent(), { trigger:'hover', placement:'top', title : $("#"+key+"_Site").attr('data-name').replace(' Site', ''), html:true, content: '<i>'+ vals[1] +'</i><img src="/assets/realmatic/media/logo.png" class="img-fluid">', container: 'body', customClass:'hbg'+key })
+  new bootstrap.Popover($("#"+key+"_Site").parent(), { trigger:'hover', placement:'top', title : $("#"+key+"_Site").attr('data-name').replace(' Site', ''), html:true, content: '<i>'+ vals[1] +'</i><img src="/assets/realmatic/sfcmap/placeholder-transparent-china-chinese-dragon.png" class="img-fluid">', container: 'body', customClass:'hbg'+key })
 /*
   new bootstrap.Popover($("#"+key+"_Site").parent(), { trigger:'hover', placement:'top', title : $("#"+key+"_Site").attr('data-name').replace(' Site', ''), html:true, content: '<i>'+ vals[1] +'</i>', container: 'body', customClass:'hbg'+key })
 */
