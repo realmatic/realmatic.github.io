@@ -1,6 +1,6 @@
 // render map
 xhr = new XMLHttpRequest();
-xhr.open("GET","/assets/realmatic/sfcmap/sfcmap.svg",false);
+xhr.open("GET","/assets/realmatic/23-isometric-map/sfcmap.min.svg",false);
 // Following line is just to be on the safe side;
 // not needed if your server delivers SVG with correct MIME type
 xhr.overrideMimeType("image/svg+xml");

@@ -48,7 +48,9 @@ class Agent{
   
   render(){
     push()
-    rect(this.stretchX(), this.pos.y-this.size, 5, this.size); 
+    //rect(this.stretchX(), this.pos.y-this.size, 5, this.size);
+    imageMode(CENTER);
+    image(agentimg,this.stretchX(), this.pos.y,20,44);
     pop()
   }
   

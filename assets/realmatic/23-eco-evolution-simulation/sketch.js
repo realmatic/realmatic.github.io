@@ -13,6 +13,7 @@ var agentSize = 50
 
 var viewport
 var agent
+var agentimg
  
 let habitat;
 let ferns = [];
@@ -25,14 +26,15 @@ let disturbanceLevel = 0;
 
 
 function preload() {
+  agentimg = loadImage('agent.png')
   ferns[0] = loadImage('fern1.png')
   ferns[1] = loadImage('fern2.png')
   ferns[2] = loadImage('fern3.png')
   
-  streamsound = createAudio('loop.mp3')
+  //streamsound = createAudio('loop.mp3')
   
   for (let i = 0; i < 16; i++) {
-     ambientSounds[i] = createAudio('sample'+(i+1)+'.mp3')
+     //ambientSounds[i] = createAudio('sample'+(i+1)+'.mp3')
   }
 }
 
@@ -60,7 +62,7 @@ function draw() {
   soundInterval -= 1;
   if(soundInterval == 0) {
       soundIndex =                           parseInt(random(ambientSounds.length)) ;
-      ambientSounds[soundIndex].play();
+      //ambientSounds[soundIndex].play();
       disturbanceLevel = soundEffects[soundIndex]
       habitat.disturb(disturbanceLevel);
       //console.log(soundIndex);
@@ -83,8 +85,8 @@ function draw() {
 
 
 function mousePressed(){
-    getAudioContext().resume() 
-    streamsound.play()
-    streamsound.loop(true)
+    //getAudioContext().resume() 
+    //streamsound.play()
+    //streamsound.loop(true)
     //streamsound.volume(0.8)
 }
