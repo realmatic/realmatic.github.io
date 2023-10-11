@@ -21,12 +21,12 @@ if (this.readyState == 4 && this.status == 200) {
     document.getElementById("dirContainer").innerHTML = text;
   }
 };
-xmlhttp.open("GET", "/assets/michelle/sfcmap/sfcmap.json", true);
+xmlhttp.open("GET", "https://realmatic.com/assets/michelle/sfcmap/sfcmap.json", true);
 xmlhttp.send();
 
 // render map
 xhr = new XMLHttpRequest();
-xhr.open("GET","/assets/michelle/sfcmap/sfcmap.min.svg",false);
+xhr.open("GET","https://realmatic.com/assets/michelle/sfcmap/sfcmap.min.svg",false);
 // Following line is just to be on the safe side;
 // not needed if your server delivers SVG with correct MIME type
 xhr.overrideMimeType("image/svg+xml");
