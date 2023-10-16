@@ -7,9 +7,9 @@
 // disturb negative is bad
 
 var canvasHeight = 540
-var canvasWidth = 1200
-var sceneHeight = 200
-var agentSize = 50
+var canvasWidth = 800
+var sceneHeight = 300
+var agentSize = 25 
 
 var viewport
 var agent
