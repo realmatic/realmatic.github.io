@@ -1,0 +1,59 @@
+
+
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" /><meta http-equiv="x-ua-compatible" content="ie=edge" /><title>realmatic</title><link rel="apple-touch-icon" sizes="180x180" href="https://realmatic.com/assets/realmatic/favicon/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="https://realmatic.com/assets/realmatic/favicon/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="https://realmatic.com/assets/realmatic/favicon/favicon-16x16.png"><link rel="manifest" href="https://realmatic.com/assets/realmatic/favicon/site.webmanifest"><link rel="mask-icon" href="https://realmatic.com/assets/realmatic/favicon/safari-pinned-tab.svg" color="#5bbad5"><meta name="msapplication-TileColor" content="#da532c"><meta name="theme-color" content="#ffffff"><link href="https://fonts.googleapis.com/css2?family=Long+Cang&family=Ma+Shan+Zheng&family=Josefin+Sans&family=Ubuntu+Condensed&display=swap" rel="stylesheet"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" /><link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous"><script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script><script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script><!--- script src="https://cdn.jsdelivr.net/npm/d3@7"></script><script src="https://cdn.jsdelivr.net/npm/@observablehq/plot@0.6"></script ---><link href="https://realmatic.com/assets/realmatic/style.css" rel="stylesheet" /></head><body><!--Main Navigation--><header><!-- Navbar --><nav class="navbar navbar-expand-lg bg-white py-0"><div class="container-fluid ps-5 pe-5"><a class="navbar-brand" href="/"><span class='brand'>realmatic</span></a><button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain" aria-controls="navbarMain" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button><div class="collapse navbar-collapse" id="navbarMain"><ul class="navbar-nav ms-auto"><li class="nav-item"><a class="nav-link active" aria-current="page" href="https://realmatic.pythonanywhere.com"><i class="fa-solid fa-user-lock fa-lg"></i></a></li><!--- li class="nav-item"><a class="nav-link" href="#">Features</a></li><li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Dropdown link
+              </a><ul class="dropdown-menu"><li><a class="dropdown-item" href="#">Action</a></li><li><a class="dropdown-item" href="#">Another action</a></li><li><a class="dropdown-item" href="#">Something else here</a></li></ul></li ---></ul></div></div></nav><!-- Navbar --></header><div class="container my-2 mx-5"><div class="mx-5"><h5 class='text-center'>Arduino 连接步进电机<br>
+Arduino and stepper motors</h5><p>将 NEMA 17 步进电机与 A4988 步进驱动器连接，由 Arduino Uno 控制。 其他元件包括 12V 电源、面包板、连接引脚和电容器。Connects a NEMA 17 stepper motor with an A4988 stepper drive, controlled by an Arduino Uno. Other components include a 12V Power supplier, a breadboard, connect pins and capacitors.
+NEMA17 stepper motor has 200 steps, or 1.8 degrees per step resolution, 2 phases.</p><h5><a href="https://themachineshop.uk/how-to-drive-a-nema17-stepper-motor-with-a-tmc2208-v3-and-an-arduino-uno/" target='_blank'>Wiring Tutorial Reference</a></h5><ol><li>Breadboard, the middle component area is for drivers and other components, connected half of the row</li><li>Both sides are power supply columns, sections all connected, not in between</li><li>Connection power supply (with ground and the capacitor) on the side of the breadboard</li><li>Connect group and 5V of the driver to the Arduino to power the Arduino</li><li>Connection four phases of the step motor to the driver</li><li>Connect the control (enable, direction and step) to the Arduino control</li></ol><center><img src="https://realmatic.com/assets/realmatic/media/23-arduino-step-motor.jpg" class="img-fluid"></center><h5>Arduino programming (sample code)</h5><pre class='mx-5'>
+ // Step the motor
+// define the pins
+#define EN_PIN    7 //enable
+#define STEP_PIN  8 //step
+#define DIR_PIN   9 //direction
+
+void setup()
+{
+  pinMode(LED_BUILTIN, OUTPUT);
+  //set pin modes
+  pinMode(EN_PIN, OUTPUT); // set the EN_PIN as an output
+  digitalWrite(EN_PIN, HIGH); // deactivate driver (LOW active)
+  pinMode(DIR_PIN, OUTPUT); // set the DIR_PIN as an output
+  digitalWrite(DIR_PIN, LOW); // set the direction pin to low
+  pinMode(STEP_PIN, OUTPUT); // set the STEP_PIN as an output
+  digitalWrite(STEP_PIN, LOW); // set the step pin to low
+
+  digitalWrite(EN_PIN, LOW); // activate driver
+}
+
+// This function sets the number of steps, the direction and the speed
+// steps: a full rotation requires 1600 steps
+// direction: 1 = clockwise, 0 = anticlockwise
+// speed: number of microseconds between each step, min 100
+void rotateMotor(int steps, bool direction, int speed) {
+  // Set the motor direction
+  digitalWrite(DIR_PIN, direction);
+ 
+  // Step the motor
+  for (int i = 0; i < steps; i++) {
+    digitalWrite(STEP_PIN, HIGH);
+    delayMicroseconds(speed);
+    digitalWrite(STEP_PIN, LOW);
+    delayMicroseconds(speed);
+  }
+}
+
+void loop()
+{
+  //make steps
+  //rotateMotor(1600,1,100); // full fast rotation clockwise
+  //digitalWrite(LED_BUILTIN, HIGH);
+  delay(1000); // one second delay
+  //rotateMotor(1600,0,1000); // full slow rotation anticlockwise
+  // digitalWrite(LED_BUILTIN, LOW);
+  //delay(1000); // one second delay
+  //rotateMotor(400,1,500); // quarter rotation clockwise
+  //delay(1000); // one second delay
+  //rotateMotor(400,0,500); // quarter rotation anticlockwise
+  //delay(1000); // one second delay
+}
+</pre></div><!-- Footer --><hr/><footer class="footer" id="contact"><div class="container"><div class="row"><div class="col-lg-4 col-md-4 col-sm-12 ps-5"><p class='lead'>realmatic.com</p></div><div class="col-lg-4 col-md-4 col-sm-12"><p class='copyright text-muted'>版权所有 Copyright &copy; 2014 - 2023</p></div><div class="col-lg-4 col-md-4 col-sm-12 ps-5"><a style='text-decoration:none' href='/disclaimer'>免责声明 - Disclaimer</a></div></div></div></footer><!--Footer--></body></html>

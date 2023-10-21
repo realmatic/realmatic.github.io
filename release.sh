@@ -12,6 +12,8 @@ wget --no-check-certificate -O page/23-portland-urban-forest.html $REALMATIC/pag
 
 wget --no-check-certificate -O page/23-eco-evolution-simulation.html $REALMATIC/page/23-eco-evolution-simulation
 
+wget --no-check-certificate -O page/23-arduino-step-motor.html $REALMATIC/page/23-arduino-step-motor
+
 wget --no-check-certificate -O page/23-art-app.html $REALMATIC/page/23-art-app
 
 # wget --no-check-certificate -O page/.html $REALMATIC/page/
