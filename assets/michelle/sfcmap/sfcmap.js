@@ -60,7 +60,7 @@ function( key, vals) {
   if( vals[2] == '') {
     new bootstrap.Popover($("#"+key+"_Site").parent(), { trigger:'hover', placement:'top', title : $("#"+key+"_Site").attr('data-name').replace(' Site', ''), html:true, content: '<i>'+ vals[1] +'</i>', container: 'body', customClass:'hbg'+key })
   } else {
-    new bootstrap.Popover($("#"+key+"_Site").parent(), { trigger:'hover', placement:'top', title : $("#"+key+"_Site").attr('data-name').replace(' Site', ''), html:true, content: '<i>'+ vals[1] +'</i><img src="/assets/michelle/sfcmap/'+vals[2]+'" class="img-fluid">', container: 'body', customClass:'hbg'+key })
+    new bootstrap.Popover($("#"+key+"_Site").parent(), { trigger:'hover', placement:'top', title : $("#"+key+"_Site").attr('data-name').replace(' Site', ''), html:true, content: '<i>'+ vals[1] +'</i><img src="https://realmatic.com/assets/michelle/sfcmap/'+vals[2]+'" class="img-fluid">', container: 'body', customClass:'hbg'+key })
   }
 });
 
