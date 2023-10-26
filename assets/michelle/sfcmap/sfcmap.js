@@ -38,7 +38,7 @@ var sites= {
 , 'St_Mary_s_Square': ['','a rooftop green space located on top of a multi-level garage','']
 , 'West_Ping_Yuen': ['','an addition to Central Ping Yuen completed in 1956','']
 , 'Willie_Wong_Playground': ['#95d1a3','an urban park featuring playgrounds, athletic courts, and a gym','']
-, 'Him_Mark_Lai_Library': ['','a library','HMLLibrary.png']
+, 'Him_Mark_Lai_Library': ['','a library with large Asian Interest collection in English specifically focuses on China, Chinese culture and the Chinese in America','HMLLibrary.png']
 , 'I-Hotel': ['#f07b3b','historical site of landmark affordable housing advocacy in Chinatown','IHotel.png']
 }
 
