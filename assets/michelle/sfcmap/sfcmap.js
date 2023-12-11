@@ -37,6 +37,8 @@ var sites= {
 , 'Spofford_Alley': ['#f07b3b','historic alley of Chinatown, one of the many involved in the Alleyways Program','']
 , 'St_Mary_s_Square': ['','a rooftop green space located on top of a multi-level garage','']
 , 'West_Ping_Yuen': ['','an addition to Central Ping Yuen completed in 1956','']
+, 'Woh_Hei_Yuen': ['','a small urban park with a robust recreation center offering a wide range of programs','']
+, 'YMCA_Chinatown': ['','founded in 1911, serving the community as a recreation center and social site','']  
 , 'Willie_Wong_Playground': ['#95d1a3','an urban park featuring playgrounds, athletic courts, and a gym','']
 , 'Him_Mark_Lai_Library': ['','a library with large Asian Interest collection in English specifically focuses on China, Chinese culture and the Chinese in America','HMLLibrary.png']
 , 'I-Hotel': ['#f07b3b','historical site of landmark affordable housing advocacy in Chinatown','IHotel.png']
