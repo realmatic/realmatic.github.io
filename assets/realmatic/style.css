@@ -44,6 +44,11 @@ body {
   color: #D65E4B;
 }
 
+.btn-link {
+  color: #1D003D;
+  --bs-btn-hover-color: #1D003D;
+}
+
 a {
   color: #1D003D;
 }
