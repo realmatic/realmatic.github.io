@@ -46,6 +46,7 @@ body {
   font-family: 'Poppins', serif, serif;
   font-size: 16px;
   text-color: #807171;
+  background-color: #f3eee8 !important;
 }
 
 h1, h2, h3, h4, h5, h6 {
