@@ -16,12 +16,7 @@
 }
 
 .td-peach {
-  color: #8Fb9A8 !important; 
   background-color: #fbd2bb !important;
-}
-
-.td-peach p,ul {
-  color: #8Fb9A8 !important; 
 }
 
 .navbar .navbar-nav .nav-item:not(:last-child) ::after {
