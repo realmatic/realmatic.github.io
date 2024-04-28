@@ -1,0 +1,61 @@
+@charset "UTF-8";
+
+.navbar .navbar-nav .nav-link {
+    color: #000000;
+    font-size: 1.1em;
+    padding-left: 2em;
+    padding-right: 2em;
+    border-top: thick double #000;
+    border-bottom: thick double #000;
+}
+
+/*
+.navbar .navbar-nav .nav-item:not(:last-child) ::after {
+    content: "\00a0\00a0\00a0\25CF";
+}
+*/
+
+@media only screen and (min-width: 992px) {
+  .navbar {
+    flex-direction: column;
+    padding-top: .5em;
+    padding-bottom: 1.5em;
+  }
+}
+
+.brand {
+  font-family: 'Crimson Pro', serif; 
+  font-size: 36px;
+  color: #343a40;
+  text-transform: capitalize; 
+}
+
+.bg-light {
+   background-color: #FFFFFF !important;
+}
+
+a {
+  color: #3a373e;
+}
+
+a:hover { 
+  color: #343a40;
+}
+
+.text-primary {
+  color: #343a40 !important;
+}
+
+body {
+  font-family: 'Josefin Sans', serif, 'KaiTi', '楷体', STKaiti, '华文楷体', serif;
+  font-size: 16px;
+  text-color: #3a373e;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Josefin Sans', serif, 'KaiTi', '楷体', STKaiti, '华文楷体', serif;
+  font-weight: 800;
+  color: #54474D;
+}
+
+
