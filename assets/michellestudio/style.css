@@ -1,0 +1,75 @@
+@charset "UTF-8";
+
+.navbar .navbar-nav .nav-link {
+    color: #000000;
+}
+
+@media only screen and (min-width: 992px) {
+  .navbar {
+ //   flex-direction: column;
+    padding-top: .5em;
+    padding-bottom: 0em;
+  }
+}
+
+.bg-light {
+   background-color: #FFFFFF !important;
+}
+
+a {
+  color: #3a373e;
+}
+
+a:hover { 
+  color: #343a40;
+}
+
+.text-primary {
+  color: #343a40 !important;
+}
+
+body {
+  font-family: 'Josefin Sans', serif, 'KaiTi', '楷体', STKaiti, '华文楷体', serif;
+  text-color: #3a373e;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Josefin Sans', serif, 'KaiTi', '楷体', STKaiti, '华文楷体', serif;
+  font-weight: 800;
+  color: #54474D;
+}
+
+#gallery .item:hover {
+  border:1px solid #DDDDDD;
+}
+
+/* img-hover-text effect */
+.img-hover-text {
+  position: relative;
+}
+
+.img-hover-text .overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background: linear-gradient(to bottom, rgba(255,255,255,0) 75%, rgba(68,68,68,.8));
+}
+
+.img-hover-text:hover .overlay {
+  opacity: 1;
+}
+
+.img-hover-text .text {
+  color: #FFFFFF;
+  position: absolute;
+  bottom: 5%;
+  left: 5%;
+}
+
+/* img-hover-text effect */
