@@ -1,11 +1,5 @@
 @charset "UTF-8";
 
-.navbar {
-  flex-direction: column;
-  padding-top: 1em;
-  padding-bottom: 1em;
-}
-
 a {
   color: #3a373e;
 }
@@ -26,12 +20,12 @@ a:hover {
 }
 
 body {
-  font-family: 'Josefin Sans', serif, 'KaiTi', '楷体', STKaiti, '华文楷体', serif;
+  font-family: 'Josefin Sans', serif;
   text-color: #3a373e;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Josefin Sans', serif, 'KaiTi', '楷体', STKaiti, '华文楷体', serif;
+  font-family: 'Josefin Sans', serif;
   font-weight: 800;
   color: #54474D;
 }
