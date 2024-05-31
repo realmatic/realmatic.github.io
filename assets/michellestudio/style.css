@@ -13,19 +13,29 @@ a:hover {
 }
 
 .brand {
-  font-family: 'Crimson Pro', serif;
+  font-family: "Spectral SC", serif;
+  font-weight: 700;
   font-size: 36px;
   color: #343a40;
   text-transform: capitalize;
+  text-decoration: none;
+}
+
+.subbrand {
+  font-family: "Spectral", serif;
+  font-weight: 700;
+  font-size: 24px;
+  color: #343a40;
+  margin-top: -10px !important;
 }
 
 body {
-  font-family: 'Josefin Sans', serif;
+  font-family: "Lato", sans-serif;
   text-color: #3a373e;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Josefin Sans', serif;
+  font-family: "Spectral SC", serif;
   font-weight: 800;
   color: #54474D;
 }
