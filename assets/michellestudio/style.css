@@ -55,7 +55,7 @@ h1, h2, h3, h4, h5, h6 {
   width: 100%;
   opacity: 0;
   transition: .5s ease;
-  background: rgba(68,68,68,.8);
+  background: rgba(68,68,68,.4);
 }
 
 .img-hover-text:hover .overlay {
@@ -75,4 +75,3 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* img-hover-text effect */
-
