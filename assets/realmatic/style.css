@@ -190,5 +190,7 @@ a:hover {
   margin-left: 1.25rem;
 }
 
-
-
+#sidebarMenu a.btn.btn-toggle-nav.active {
+  background-color: #DDDDDD;
+  border-style: none;
+}
