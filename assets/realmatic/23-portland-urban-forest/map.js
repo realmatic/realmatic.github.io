@@ -11,7 +11,7 @@ L.tileLayer(
 // Add a svg layer to the map
 L.svg().addTo(map);
 
-import markers from 'https://realmatic.com/assets/realmatic/23-portland-urban-forest/portland_plot_trees.json' assert { type: 'json' };
+import markers from 'https://realmatic.com/assets/realmatic/23-portland-urban-forest/portland_plot_trees.json' with { type: 'json' };
 
 function myMarkers(lot) {
   L.circleMarker([lot.lat, lot.lon], {
